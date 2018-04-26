@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+  <form class="" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ from.as_p }}
+    <input type="submit" name="" value="Добавить">
+    <button>Добавить</button>
+  </form>
+{% endblock content %}

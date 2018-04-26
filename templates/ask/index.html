@@ -1,0 +1,16 @@
+{% extends "ask/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<ul>
+  {% for a in articles %}
+  <li>
+    {{a.title}} - {{a.count}} - <span id="article_count-{{ a.id }}">
+      <a href="article/like/{{ a.id }}" class="js-article-like" data-id="{{ a.id }}">ЛАЙК</a>
+      <img src="/media/{{ a.image }}" height="100px" test="{% static "my_app/exaple.jpeg" %}" alt="My image"></span>
+  </li>
+
+  {% endfor %}
+
+</ul>
+{% endblock content %}
